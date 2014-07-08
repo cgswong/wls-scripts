@@ -1,15 +1,20 @@
-<<<<<<< HEAD
-Move JMS messages from one queue (old) to another (new) queue. Queues can be remote.
+# Introduction
+Move WebLogic JMS messages from one queue (old) to another (new) queue which can be local or remote. To move multiple queues you can use a wrapper script or feel free to modify the code for improved functionality.
 
-Requirements
+## Version
+Current version: 1.0.0
+
+# Requirements
 domain.properties - File containing domain and server details.
 
-Usage
-. ./setWLSEnv.sh
-java weblogic.WLST move_messages.py
-=======
-wls-move-messages
-=================
+# Usage
+Set the environment:
 
-Move WebLogic Server (WLS) Java Message Service (JMS) from one queue to another (remote or local)
->>>>>>> 9ab6469080cc3cd88d084f3e78cfaa00390b8387
+```
+. ./setWLSEnv.sh
+```
+
+Run the script using WLST:
+```
+java weblogic.WLST move_messages.py
+```
