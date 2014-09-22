@@ -1,13 +1,13 @@
 ######################################################################
-# NAME: heap_monitor.py                                              #
-# DESC: Monitors the HJVMHeapSize for all running servers in a       #
-#       WebLogic domain. It checks the heap size every 3 minutes and #
-#       prints a warning if the heap size is greater than a specified#
-#       threshold.                                                   #
-#                                                                    #
-# LOG:                                                               #
-# yyyy/mm/dd [name] [version]: [notes]                               #
-# 2014/08/18 cgwong v0.1.0: Initial creation from notes.             #
+# NAME: heap_monitor.py                                              
+# DESC: Monitors the HJVMHeapSize for all running servers in a       
+#       WebLogic domain. It checks the heap size every 3 minutes and 
+#       prints a warning if the heap size is greater than a specified
+#       threshold.                                                   
+#                                                                    
+# LOG:                                                               
+# yyyy/mm/dd [name] [version]: [notes]                               
+# 2014/08/18 cgwong v0.1.0: Initial creation from notes.             
 ######################################################################
 
 # Some initial variables
