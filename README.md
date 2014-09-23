@@ -1,5 +1,5 @@
 # Introduction
-WebLogic script repository.
+WebLogic administration script repository.
 
 ## Version
 Current version: 1.0.0
