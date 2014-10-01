@@ -16,7 +16,9 @@
 # 2014/09/04 cgwong v0.1.0: Initial creation.                      
 # 2014/09/18 cgwong v0.1.1: Added "-XX:-UseGCOverheadLimit" flag to fix JVM OOM error.
 # 2014/09/18 cgwong v0.2.0: Switched to Garbage-First or G1 collector.
-#			 Added additional GC flags for diagnostics and logging.
+#			 			Added additional GC flags for diagnostics and logging.
+# 2014/10/01 cgwong v0.3.0: Source managed server memory size from specific cluster setting file.
+
 ###################################################################
 
 # Custom variables
@@ -26,12 +28,15 @@ WEBLOG_HOME=/www/web/weblogs/${DOMAIN_NAME}
 # Enabled monitoring, unlocking commercial features
 MONITOR_ARGS="-XX:+UnlockCommercialFeatures -XX:+FlightRecorder"
 
-# Admin and managed server memory settings
+# Source in server cluster specific memory settings
+. ${DOMAIN_HOME}/bin/setCluster_${SERVER_NAME}.sh
+
+# Standard Admin and managed server memory settings
 AS_MEM_SIZE="4G"
-MS_MEM_SIZE="8G"
+##MS_MEM_SIZE="8G"
 AS_MEM_ARGS="-Xms${AS_MEM_SIZE} -Xmx${AS_MEM_SIZE}"
 MS_MEM_ARGS="-Xms${MS_MEM_SIZE} -Xmx${MS_MEM_SIZE}"
-STD_MEM_ARGS="-d-Xss1024k"
+STD_MEM_ARGS="-d64 -Xss1024k"
 MEM_PERM_SIZE="-XX:PermSize=128m"
 MEM_MAX_PERM_SIZE="-XX:MaxPermSize=512m"
 MEM_DEV_ARGS="-XX:CompileThreshold=8000 ${MEM_PERM_SIZE} ${MEM_MAX_PERM_SIZE}"
