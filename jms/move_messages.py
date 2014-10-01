@@ -7,7 +7,7 @@
 # REQ. : domain.properties - File containing domain and server details.
 #
 # USAGE:
-#       . ./setWLSEnv.sh
+#       . $WL_HOME/server/bin./setWLSEnv.sh
 #       java weblogic.WLST move_messages.py
 #
 # LOG  :
@@ -20,7 +20,7 @@ import java.lang
 import os
 import string
 
-propInputStream = FileInputStream("domain.properties")
+propInputStream = FileInputStream("move_messages.properties")
 configProps = Properties()
 configProps.load(propInputStream)
 
