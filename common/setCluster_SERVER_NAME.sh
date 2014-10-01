@@ -14,5 +14,5 @@
 ###################################################################
 
 # Define specific variables
-JMX_PORT=7003     ; export JMX_PORT
-MS_MEM_SIZE="6G"  ; export MS_MEM_SIZE
+JMX_PORT=<jmx_port>     ; export JMX_PORT
+MS_MEM_SIZE=  ; export MS_MEM_SIZE
