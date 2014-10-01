@@ -1,17 +1,22 @@
 # Introduction
 WebLogic administration script repository.
 
-## Version
-Current version: 1.0.0
 
-# Usage
-Set the environment:
+## Directories and Files
+* **common**  - Contains scripts common to most administrative functionisley or domains specifics.
+* **jms**     - Contains scripts specific to JMS functionality.
+* **monitor** - Scripts specific to monitoring and benchmarking.
+* **testing** - Scripts specific to testing features and functionalities.
+
+
+## Script setup
+To set the environment for WLST scripts:
 
 ```
-. ./setWLSEnv.sh
+. $WL_HOME/server/bin/setWLSEnv.sh
 ```
 
 Run .py scripts using WLST:
 ```
-java weblogic.WLST <script>.py
+$JAVA_HOME/bin/java weblogic.WLST <script>.py
 ```
