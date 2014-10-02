@@ -3,7 +3,7 @@ WebLogic administration script repository.
 
 
 ## Directories and Files
-* **common**  - Contains scripts common to most administrative functionisley or domains specifics.
+* **common**  - Contains scripts common to most administrative functions and domain.
 * **jms**     - Contains scripts specific to JMS functionality.
 * **monitor** - Scripts specific to monitoring and benchmarking.
 * **testing** - Scripts specific to testing features and functionalities.
